@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Reference\Paint\js\.gitignore" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -65,6 +66,41 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\app.js" />
+    <Content Include="Index.html" />
+    <Content Include="Reference\Angular\angular-route.js" />
+    <Content Include="Reference\Angular\angular-ui-router.js" />
+    <Content Include="Reference\Angular\angular-ui-router.min.js" />
+    <Content Include="Reference\Angular\angular.js" />
+    <Content Include="Reference\Angular\angular.min.js" />
+    <Content Include="Reference\Paint\css\literallycanvas.css" />
+    <Content Include="Reference\Paint\img\alpha.png" />
+    <Content Include="Reference\Paint\img\checkerboard-8x8.png" />
+    <Content Include="Reference\Paint\img\dashed-line.png" />
+    <Content Include="Reference\Paint\img\ellipse.png" />
+    <Content Include="Reference\Paint\img\eraser.png" />
+    <Content Include="Reference\Paint\img\eyedropper.png" />
+    <Content Include="Reference\Paint\img\hue.png" />
+    <Content Include="Reference\Paint\img\line-with-arrow.png" />
+    <Content Include="Reference\Paint\img\line.png" />
+    <Content Include="Reference\Paint\img\pan.png" />
+    <Content Include="Reference\Paint\img\pencil.png" />
+    <Content Include="Reference\Paint\img\polygon-cancel.png" />
+    <Content Include="Reference\Paint\img\polygon-closed.png" />
+    <Content Include="Reference\Paint\img\polygon-open.png" />
+    <Content Include="Reference\Paint\img\polygon.png" />
+    <Content Include="Reference\Paint\img\rectangle.png" />
+    <Content Include="Reference\Paint\img\redo.png" />
+    <Content Include="Reference\Paint\img\saturation.png" />
+    <Content Include="Reference\Paint\img\screenshot.png" />
+    <Content Include="Reference\Paint\img\text.png" />
+    <Content Include="Reference\Paint\img\undo.png" />
+    <Content Include="Reference\Paint\img\zoom-in.png" />
+    <Content Include="Reference\Paint\img\zoom-out.png" />
+    <Content Include="Reference\Paint\js\literallycanvas-core.js" />
+    <Content Include="Reference\Paint\js\literallycanvas-core.min.js" />
+    <Content Include="Reference\Paint\js\literallycanvas.js" />
+    <Content Include="Reference\Paint\js\literallycanvas.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

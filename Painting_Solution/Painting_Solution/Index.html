@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="Reference/Paint/css/literallycanvas.css" rel="stylesheet" />
+    <title>
+        Paint by Abhilash
+    </title>
+    <script src="Reference/Angular/angular.min.js"></script>
+    <script src="App/app.js"></script>
+
+    <!-- dependency: React.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react-with-addons.js"></script>
+
+    <script src="Reference/Paint/js/literallycanvas.min.js"></script>
+
+    
+</head>
+<body ng-app="myApp">
+    <div class="literally"></div>
+
+    <!-- kick it off -->
+    <script>
+        var savedPicture = {};
+        // Look ma, no jQuery!
+        LC.init(
+            document.getElementsByClassName('literally')[0],
+            { imageURLPrefix: '/Reference/Paint/img' }
+        );
+
+        /* or if you just love jQuery,
+            $('.literally').literallycanvas({imageURLPrefix: '/static/img'})
+            or
+            LC.init($('.literally').get(0), {imageURLPrefix: '/static/img'})
+        */
+
+        $('#saveBtn').click(function () {
+            savedPicture = JSON.stringify(LC.getSnapshot());
+        });
+
+        $('#loadBtn').click(function () {
+            LC.loadSnapshot(JSON.parse(savedPicture))
+        });
+    </script>
+</body>
+</html>
