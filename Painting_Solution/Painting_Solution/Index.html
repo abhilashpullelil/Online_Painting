@@ -18,11 +18,13 @@
 <body ng-app="myApp">
     <div class="literally"></div>
 
+    <button id="saveBtn">Save</button>
+
+    <button id="loadBtn">Load</button>
     <!-- kick it off -->
     <script>
-        var savedPicture = {};
         // Look ma, no jQuery!
-        LC.init(
+        var lc = LC.init(
             document.getElementsByClassName('literally')[0],
             { imageURLPrefix: '/Reference/Paint/img' }
         );
@@ -33,12 +35,19 @@
             LC.init($('.literally').get(0), {imageURLPrefix: '/static/img'})
         */
 
-        $('#saveBtn').click(function () {
-            savedPicture = JSON.stringify(LC.getSnapshot());
-        });
+       
+    </script>
 
-        $('#loadBtn').click(function () {
-            LC.loadSnapshot(JSON.parse(savedPicture))
+    <script>
+        $(document).ready(function () {
+            var savedPicture = {};
+            $('#saveBtn').click(function () {
+                savedPicture = JSON.stringify(lc.getSnapshot());
+            });
+
+            $('#loadBtn').click(function () {
+                lc.loadSnapshot(JSON.parse(savedPicture))
+            });
         });
     </script>
 </body>
